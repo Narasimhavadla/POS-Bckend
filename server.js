@@ -152,7 +152,7 @@ sequelize.authenticate()
       // Constraint already dropped or does not exist
     }
 
-    server.listen(PORT, () => {
+    server.listen(PORT, '0.0.0.0', () => {
       logger.info(`🚀 D&K SmartServe POS Backend server running on port ${PORT}`);
       logger.info(`📡 Socket.io ready for real-time POS & KDS sync`);
       setupCronJobs();
